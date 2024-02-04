@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body>
+  <nav>
+    <div class="nav__logo">snap</div>
+    <div class="nav__papa">
+      <img src="images/icon-close-menu.svg" class="nav__close">
+      <ul class="nav__links">
+        <li class="slide">
+          <a href="#">Features</a>
+          <img src="images/icon-arrow-down.svg">
+          <ul class="nav__links--slide">
+            <li>
+              <img src="images/icon-todo.svg">
+              <a href="#">Todo List</a>
+            </li>
+            <li>
+              <img src="images/icon-calendar.svg">
+              <a href="#">Calender</a>
+            </li>
+            <li>
+              <img src="images/icon-reminders.svg">
+              <a href="#">Reminders</a>
+            </li>
+            <li>
+              <img src="images/icon-planning.svg">
+              <a href="#">Planning</a>
+            </li>
+          </ul>
+        </li>
+        <li class="slide">
+          <a href="#">Company</a>
+          <img src="images/icon-arrow-down.svg">
+          <ul class="nav__links--slide nav__links--slide-s">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="nav__form">
+        <button class="nav__form--login">Login</button>
+        <button class="nav__form--register">Register</button>
+      </div>
+    </div>
+    <img src="images/icon-menu.svg" class="nav__open" alt="">
+  </nav>
+  <div class="content">
+    <div class="content__text">
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. 
+        Streamline processes, create team rituals, and 
+        watch productivity soar.
+      </p>
+      <button>Learn more</button>
+      <div class="logo">
+        <img src="images/client-databiz.svg">
+        <img src="images/client-audiophile.svg">
+        <img src="images/client-meet.svg">
+        <img src="images/client-maker.svg">
+      </div>
+    </div>
+    <div class="content__img">
+      <img class="de" src="images/image-hero-desktop.png" alt="">
+      <img class="mo" src="images/image-hero-mobile.png" alt="">
+    </div>
+  </div>
+  <!-- <img class="scale" src="design/desktop-design.jpg" style="width: 100%;" alt=""> -->
+  <script src="script.js"></script>
+</body>
+</html>
