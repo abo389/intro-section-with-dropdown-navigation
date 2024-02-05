@@ -22,7 +22,7 @@ function checkActive (e)
   }
 }
 
-var papa = document.querySelector( ".papa" );
+var papa = document.querySelector( ".nav__papa" );
 var open = document.querySelector( ".nav__open" );
 var close = document.querySelector( ".nav__close" );
 open.addEventListener( "click", () =>
