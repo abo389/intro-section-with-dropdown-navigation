@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preload" href="/font/static/Epilogue-Medium.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/font/static/Epilogue-Bold.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
@@ -12,6 +13,7 @@
 </head>
 <body>
   <nav>
+    <div class="nav__overlay"></div>
     <div class="nav__logo">snap</div>
     <div class="nav__papa">
       <img src="images/icon-close-menu.svg" class="nav__close">
@@ -66,17 +68,17 @@
         watch productivity soar.
       </p>
       <button>Learn more</button>
-      <div class="logo">
-        <img src="images/client-databiz.svg">
-        <img src="images/client-audiophile.svg">
-        <img src="images/client-meet.svg">
-        <img src="images/client-maker.svg">
-      </div>
     </div>
     <div class="content__img">
       <img class="de" src="images/image-hero-desktop.png" alt="">
       <img class="mo" src="images/image-hero-mobile.png" alt="">
     </div>
+  </div>
+  <div class="logo">
+    <img src="images/client-databiz.svg">
+    <img src="images/client-audiophile.svg">
+    <img src="images/client-meet.svg">
+    <img src="images/client-maker.svg">
   </div>
   <!-- <img class="scale" src="design/desktop-design.jpg" style="width: 100%;" alt=""> -->
   <script src="script.js"></script>

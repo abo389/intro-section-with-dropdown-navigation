@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: "Epilogue";
+    src: url("/font/static/Epilogue-Medium.ttf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Epilogue";
+    src: url("/font/static/Epilogue-Bold.ttf");
+    font-weight: bold;
+}
+body {
+    font-family: "Epilogue", "sans-serif";
+    background-color: var(--Almost-White);
+}
 :root {
     --Almost-White: hsl(0, 0%, 98%);
     --Medium-Gray: hsl(0, 0%, 41%);
@@ -30,15 +43,22 @@ img.scale {
     filter: opacity(50%);
 }
 /* ########################## */
-body {
-    font-family: "Epilogue", sans-serif;
-    background-color: var(--Almost-White);
-}
 nav {
     display: flex;
     align-items: center;
     padding: 23px 38px;
     margin: auto;
+}
+.nav__overlay {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00000081;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none;
 }
 .nav__logo {
     font-size: 37px;
@@ -55,7 +75,6 @@ nav .nav__papa {
     display: flex;
     padding-left: 65px;
     font-size: 15px;
-    font-weight: 500;
     gap: 42px;
 }
 .nav__links li {
@@ -76,7 +95,7 @@ nav .nav__papa {
     padding: 10px 24px;
     border-radius: 12px;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: bold;
     background-color: transparent;
     border: 0;
     border: 3px solid var(--Medium-Gray);
@@ -125,13 +144,11 @@ nav .nav__papa {
 }
 .content {
     width: 80%;
-    width: 1200px;
     margin: auto;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    /* gap: 60px; */
-    padding-top: 160px;
+    padding-top: 100px;
 }
 
 .content__text {
@@ -139,36 +156,29 @@ nav .nav__papa {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 48px;
+    gap: 3vw;
     padding-left: 15px;
 }
 .content__text h1 {
-    font-size: 83px;
-    font-weight: 800;
+    font-size: 5.5vw;
+    font-weight: bold;
     letter-spacing: -2px;
 }
 .content__text p {
     color: var(--Medium-Gray);
-    font-size: 20px;
+    font-size: 1.3vw;
     line-height: 1.5;
     font-weight: 800;
 }
 .content__text button {
     width: fit-content;
     padding: 20px 30px;
-    font-size: 22px;
+    font-size: 1.3vw;
     border-radius: 15px;
-    font-weight: 700;
+    font-weight: bold;
     background-color: var(--Almost-Black);
     color: var(--Almost-White);
     border: 1px solid var(--Almost-Black);
-}
-.content__text .logo {
-    display: flex;
-    align-items: flex-start;
-    gap: 45px;
-    /* transform: translateY(70px); */
-    padding-top: 70px;
 }
 .content__text button:hover {
     cursor: pointer;
@@ -176,12 +186,22 @@ nav .nav__papa {
     color: var(--Almost-Black);
 }
 .content__img  {
-    flex-basis: 42%;
-    transform: translateY(-100px);
+    flex-basis: 40%;
 }
 .content__img img.mo {
     display: none;
 }
+.logo {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+    flex-wrap: wrap;
+}
+
 
 /* media */
 
@@ -192,7 +212,7 @@ nav .nav__papa {
     }
     nav .nav__papa {
         position: absolute;
-        width: 65%;
+        width: 250px;
         height: 100%;
         top: 0;
         right: 0;
@@ -275,22 +295,29 @@ nav .nav__papa {
         gap: 30px;
     }
     .content__text h1 {
-        font-size: 30px;
+        font-size: 8vw;
     }
     .content__text p {
-        font-size: 16px;
+        font-size: 4vw;
     }
     .content__text button {
-        font-size: 16px;
+        font-size: 4vw;
     }
 
-    .content__text .logo {
-        width: 100%;
-        justify-content: space-evenly;
-        gap: 0;
+    .logo {
+        gap: 3vw;
         padding-top: 20px;
     }
     .content__text .logo img {
         width: 70px;
+    }
+}
+@media (max-width: 1300px) {
+    .content__img  {
+        width: 100%;
+        padding: 50px;
+    }
+    .logo {
+        padding: 30px 0;
     }
 }

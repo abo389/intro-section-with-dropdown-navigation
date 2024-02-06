@@ -25,11 +25,20 @@ function checkActive (e)
 var papa = document.querySelector( ".nav__papa" );
 var open = document.querySelector( ".nav__open" );
 var close = document.querySelector( ".nav__close" );
+var overlay = document.querySelector( ".nav__overlay" );
+overlay.addEventListener( "click", () =>
+{
+  papa.classList.remove( "active" )
+  overlay.style.display = "none";
+
+})
 open.addEventListener( "click", () =>
 {
-  papa.classList.add("active")
+  papa.classList.add( "active" )
+  overlay.style.display = "block";
 } );
 close.addEventListener( "click", () =>
 {
-  papa.classList.remove("active")
+  papa.classList.remove( "active" )
+  overlay.style.display = "none";
 })
